@@ -61,6 +61,14 @@ hamburgerButton.addEventListener('click', function() {
   });
 });
 
+// Clicking all links remove "active" class name on hamburger button
+allLinks.forEach(function(links) {
+  links.addEventListener('click', function() {
+    hamburgerLines.forEach(function(remove) {
+      remove.classList.remove('active');
+    });
+  });
+});
 
 
 
