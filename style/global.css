@@ -1,0 +1,15 @@
+/* Header title and pargraph */
+header h1,
+header p{
+  text-align: center;
+  margin-inline: 2rem;
+}
+
+/* From header section */
+header section button.explore-btn, button.learn-more-btn{
+  border: black .0938rem solid;
+  padding: .8rem 1rem;
+  cursor: pointer;
+  font-family: var(--cabinet-font-medium);
+  font-size: 0.9rem;
+}
