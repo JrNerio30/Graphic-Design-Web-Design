@@ -18,18 +18,6 @@
 
   @media (prefers-reduced-motion: no-preference) {
 
-    section.carousel-inner img{
-      animation: slide linear both;
-      animation-timeline: view();
-      animation-range: 25vh 75vh; 
-
-    }
-
-    section.carousel-inner:nth-child(2) img{
-      animation: slide linear both reverse;
-      animation-timeline: view();
-      animation-range: -10vh 90vh;
-    }
   }
 }
 
@@ -188,13 +176,13 @@
     gap: 2rem;
     display: flex;
     flex-direction: column;
-    clip-path: inset(0 0 0 0);
+    overflow: hidden;
   }
   
   section.carousel-inner{
     display: flex;
     gap: 1.9rem;
-    transform: translateX(-9rem);
+    transform: translateX(-3rem);
   }
 
   section.carousel-inner:nth-child(2){  
