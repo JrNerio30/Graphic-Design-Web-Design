@@ -16,7 +16,7 @@
   </head>
   <body>
     <nav id="mainNavigation">
-      <a href="#" class="logo"><i class="fa-solid fa-pen-nib"></i></a>
+      <a href="#" id="logoLink" class="logo"><i class="fa-solid fa-pen-nib"></i></a>
       <section class="menus" id="menuLinks">
         <a href="#" class="links">Art Gallery</a>
         <a href="#" class="links">Design Studio</a>
@@ -27,7 +27,7 @@
         <button class="join-btn">Join</button>
         <button class="shop-btn">Shop</button>
       </section>
-      <section class="hamburger-menu">
+      <section class="hamburger-menu" id="hamburgerButton">
         <span></span>
         <span></span>
         <span></span>
@@ -72,29 +72,46 @@
         <img src="./imgs/img_artistry.jpeg" alt="man with glasses pink gradient layout">
       </figure>
       <section>        
-        <p id="triggerTextReveal">Artistry</p>
+        <p>Artistry</p>
         <section class="heading-reveal">
           <div>
-            <span class="main-first-reveal">Discover <span class="ugd">unique graphic design</span></span>
+            <span id="mainFirstReveal"  class="main-first-reveal">Discover <span class="ugd">unique graphic design</span></span>
           </div>
           <div>
             <span>
-              <span class="main-second-reveal">posters that celebrate</span>
+              <span id="mainSecondReveal" class="main-second-reveal">posters that celebrate</span>
             </span>
           </div>
           <div>
             <span>
-              <span class="main-third-reveal">creativity and distinct styles.</span>
+              <span id="mainThirdReveal" class="main-third-reveal">creativity and distinct styles.</span>
             </span>
           </div>
         </section>
-          <button class="main-learn-more">
-            Learn More <i class="fa-solid fa-chevron-right right-arrow"></i>
+          <button id="mainLearnMoreBtn" class="main-learn-more">
+            Learn More <span id="mainArrowIcon"><i class="fa-solid fa-chevron-right right-arrow"></i></span>
           </button>
       </section>
     </main>
     <section class="art">
+      <div>
         <h2>Art Posters</h2>
+        <p>Transform your space with our unique designs.</p>
+      </div>
+      <figure>
+        <img src="./imgs/img9.jpeg">
+        <img src="./imgs/img5.jpeg">
+        <img src="./imgs/img1.jpeg">
+        <img src="./imgs/img2.jpeg">
+        <img src="./imgs/img3.jpeg">
+        <img src="./imgs/img4.jpeg">
+        <img src="./imgs/img5.jpeg">
+        <img src="./imgs/img6.jpeg">
+        <img src="./imgs/img10.jpeg">
+      </figure>
+    </section>
+    <section class="discover">
+
     </section>
   </body>
 </html>
