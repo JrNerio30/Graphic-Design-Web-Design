@@ -5,6 +5,11 @@ header p{
   margin-inline: 2rem;
 }
 
+/* All buttons */
+button{
+  border-radius: .25rem; 
+}
+
 /* From header section */
 header section button.explore-btn, button.learn-more-btn{
   border: black .0938rem solid;
@@ -12,4 +17,14 @@ header section button.explore-btn, button.learn-more-btn{
   cursor: pointer;
   font-family: var(--cabinet-font-medium);
   font-size: 0.9rem;
+}
+
+button.join-btn,
+button.learn-more-btn{
+  color: black;
+}
+
+section.art h2, 
+section.art p{
+  text-align: center;
 }
