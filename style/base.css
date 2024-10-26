@@ -1,9 +1,10 @@
 @import url(../Cabinet_Grotesk/css/cabinet-grotesk.css);
 @layer demo{
 
-  @keyframes slide {
-    to{
-      transform: translateX(9rem);
+  @keyframes scroll {
+    from{
+      transform: scale(.5);
+      opacity: 0;
     }
   }
 
@@ -17,7 +18,11 @@
   } 
 
   @media (prefers-reduced-motion: no-preference) {
-
+    section.art figure img{
+      animation: scroll linear both;
+      animation-timeline: view();
+      animation-range: 0vh 40vh;
+    }
   }
 }
 
@@ -87,6 +92,7 @@
     font-size: 2rem;
     text-decoration: none;
     color: var(--color-black);
+    max-height: fit-content;
   }
 
   a.links{
@@ -103,7 +109,7 @@
   section.hamburger-menu{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: .5rem;
     cursor: pointer;
     margin-top: .4688rem;
     max-height: fit-content;
@@ -112,7 +118,7 @@
   section.hamburger-menu span{
     background-color: var(--color-black);
     width: 2.5rem;
-    height: 2px;
+    height: .125rem;
     transition: all 300ms;
   }
 
@@ -177,21 +183,21 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    align-items: center;
   }
   
   section.carousel-inner{
     display: flex;
     gap: 1.9rem;
-    transform: translateX(-3rem);
+    /* transform: translateX(-3rem); */
   }
 
   section.carousel-inner:nth-child(2){  
-    transform: translateX(-5rem);
+    transform: translateX(5rem);
   }
   
   section.carousel img{
-    width: 200px;
-    transition: all 300ms;
+    width: 12.5rem;
   }
 
     /* 
@@ -207,6 +213,7 @@
     gap: 2rem;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
 
   main > section{
@@ -223,7 +230,7 @@
 
   main div{
     font-family: var(--cabinet-font-bold);
-    font-size: clamp(3rem, 5vw, 6vw);
+    font-size: clamp(3rem, 4vw, 5vw);
     max-width: 15ch;
     overflow: hidden;
   }
@@ -279,18 +286,23 @@
     cursor: pointer;
     font-family: var(--cabinet-font-medium);
     font-size: 0.9rem;
+    background-color: transparent;
+    color: black;
+    display: flex;
+    gap: .8rem;
   }
-
-  main i.fa-solid{
+  
+  main button.main-learn-more span{
     display: none;
+
   }
 
-  main i.fa-solid.hover{
+  main button.main-learn-more span.hovered{
     display: block;
   }
 
   main figure img{
-    max-width: 500px;
+    max-width: 31.25rem;
     width: 100%;
   }
 
@@ -300,20 +312,90 @@
   \\\\\\\\\\\\\\\\\\\\
   */
   section.art{
-    min-height: 200vh;
+    min-height: 400vh;
     margin-top: 5rem;
-    border-top: black 1px solid;
-    border-bottom: black 1px solid;
+    position: relative;
   } 
 
-  section.art h2{
+  section.art div{
     position: sticky;
-    top: 50%;
+    top: 35%;
+    margin: 1rem;
+    z-index: 2;
+    padding-block: 5rem;
+    z-index: 1;
+  }
+
+  section.art h2{
     font-family: var(--cabinet-font-bold);
-    font-size: clamp(3rem, 4vw, 9vw);
-    margin: var(--margin-all);
-    text-align: center;
-    transition: all 300ms;
+    font-size: clamp(3rem, 5vw, 6vw);
+  }
+
+  section.art p{
+    font-family: var(--cabinet-font-regular);
+    margin-inline: 1rem;
+  }
+  
+  section.art figure img{
+    width: 20%;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  section.art figure img:nth-child(1){
+    top: 2%;
+    left: 10%;
+  }
+
+  section.art figure img:nth-child(2){
+    top: 13%;
+    right: 10%;
+  }
+
+  section.art figure img:nth-child(3){
+    top: 24%;
+    left: 15%;
+  }
+
+  section.art figure img:nth-child(4){
+    top: 35%;
+    right: 15%;
+  }
+
+  section.art figure img:nth-child(5){
+    top: 46%;
+    left: 10%;
+  }
+
+  section.art figure img:nth-child(6){
+    top: 57%;
+    right: 10%;
+  }
+
+  section.art figure img:nth-child(7){
+    top: 68%;
+    left: 15%;
+  }
+
+  section.art figure img:nth-child(8){
+    top: 79%;
+    right: 15%;
+  }
+
+  section.art figure img:nth-child(9){
+    top: 90%;
+    left: 10%;
+  }
+
+
+
+    /* 
+  \\\\\\\\\\\\\\\\\\\\
+    DISCOVER CTA SECTION
+  \\\\\\\\\\\\\\\\\\\\
+  */
+  section.discover{
+    height: 200vh;
   }
 
 }
