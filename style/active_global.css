@@ -1,0 +1,91 @@
+/* 
+  Changes navigation menu color to black and white
+  when on the art section 
+*/
+nav.change{
+  background-color: white;
+}
+
+a.logo.change{
+  color: white;
+}
+
+a.links.change{
+  color: white;
+}
+
+section.shop-join-menu button.change{
+  border: white 1.5px solid;
+}
+
+
+button.shop-btn.change{
+  background-color: white;
+  color: black;
+}
+
+section.hamburger-menu span.change{
+  background-color: white;
+}
+
+/* 
+  Clicking on hamburger menu transoforms into
+  an X to guide users an exit to the full screen
+  navigation menu
+*/
+section.hamburger-menu span:nth-child(1).active{
+  transform: rotate(30deg);
+  transform-origin: left;
+}
+
+section.hamburger-menu span:nth-child(2).active{
+  transform: scale(0);
+}
+
+section.hamburger-menu span:nth-child(3).active{
+  transform: rotate(-33deg);
+  transform-origin: left;
+}
+
+/* 
+  Revealing the heading from main section
+  when the user is on the main section
+*/
+main span.main-first-reveal.active{
+  display: block;
+  transform: translate(0, 0);
+}
+
+main span.main-second-reveal.active{
+  display: block;
+  transform: translate(0, 0);
+}
+
+main span.main-third-reveal.active{
+  display: block;
+  transform: translate(0, 0);
+}
+
+/* 
+  A right arrow icon appears when a user
+  hovers over the learn more button
+*/
+main button.main-learn-more span.hovered{
+  display: block;
+}
+
+/* 
+  When users are on a certain screen position
+  on the art section, the background and the color 
+  changes to black and white to isolate users for them
+  to have a better view of each arts that are being showcased.
+  */
+section.art.on-screen{
+  background-color: black;
+}
+  
+section.art h2.change, 
+section.art p.change{
+  transition: all 500ms;
+  color: white;
+}
