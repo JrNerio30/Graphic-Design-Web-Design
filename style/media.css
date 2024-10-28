@@ -26,6 +26,7 @@
     color: var(--color-black);
     text-decoration: none;
     font-family: var(--cabinet-font-regular);
+    color: black;
   }
 
   section.shop-join-menu{
@@ -33,7 +34,7 @@
     gap: 1rem;
   }
 
-  button.join-btn, .shop-btn{
+  section.shop-join-menu button{
     border: black 1.5px solid;
     padding: .5rem 1rem;
     cursor: pointer;
