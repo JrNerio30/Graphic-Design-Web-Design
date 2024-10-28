@@ -116,24 +116,10 @@
   }
 
   section.hamburger-menu span{
-    background-color: var(--color-black);
     width: 2.5rem;
     height: .125rem;
     transition: all 300ms;
-  }
-
-  section.hamburger-menu span:nth-child(1).active{
-    transform: rotate(30deg);
-    transform-origin: left;
-  }
-
-  section.hamburger-menu span:nth-child(2).active{
-    transform: scale(0);
-  }
-
-  section.hamburger-menu span:nth-child(3).active{
-    transform: rotate(-33deg);
-    transform-origin: left;
+    background-color: black;
   }
 
   /* 
@@ -235,7 +221,7 @@
     overflow: hidden;
   }
 
-  main span.ugd{
+  main span.heading-highlight{
     color: var(--color-dark-red);
   }
 
@@ -256,22 +242,6 @@
     transform: translate(0, 100%);
     transition: all 1.4s;
   }
-
-  main span.main-first-reveal.active{
-    display: block;
-    transform: translate(0, 0);
-  }
-
-  main span.main-second-reveal.active{
-    display: block;
-    transform: translate(0, 0);
-  }
-
-  main span.main-third-reveal.active{
-    display: block;
-    transform: translate(0, 0);
-  }
-
 
   main section button.main-shop{
     background-color: transparent;
@@ -297,7 +267,7 @@
 
   }
 
-  main button.main-learn-more span.hovered{
+  main button.main-learn-more span.hovering{
     display: block;
   }
 
@@ -312,9 +282,10 @@
   \\\\\\\\\\\\\\\\\\\\
   */
   section.art{
-    min-height: 400vh;
+    min-height: 600vh;
     margin-top: 5rem;
     position: relative;
+    transition: all 500ms;
   } 
 
   section.art div{
@@ -339,6 +310,7 @@
   section.art figure img{
     width: 20%;
     position: absolute;
+    /* View the images feature coming soon */
     cursor: pointer;
   }
 
@@ -386,6 +358,8 @@
     top: 90%;
     left: 10%;
   }
+
+
 
 
 
