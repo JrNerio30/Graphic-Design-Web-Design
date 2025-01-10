@@ -55,8 +55,6 @@ allLinks.forEach(function(links) {
 
 const navArrayBlackWhite = [mainNavigation, logoLink, allLinks,  ]
 const shopJoinMain = document.querySelectorAll('section.shop-join-menu button')
-console.log(shopJoinMain)
-console.log(navArrayBlackWhite)
 
 /*
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -93,22 +91,42 @@ mainLearnMoreBtn.addEventListener('mouseout', function() {
 When section is fully on the screen, activate 'on-screen' 
 classlist to change background colour and text color to black and white 
 */
-const mainTextArray = [headingColorChange, paraColorChange];
+
+
+const naviLinks = document.querySelectorAll('a.links');
+console.log(naviLinks)
 const artSection = document.querySelector('section.art')
+const mainTextArray = [headingColorChange, paraColorChange];
 window.addEventListener('scroll', function() {
-  const artSecPosition = artSection.getBoundingClientRect();
+const artSecPosition = artSection.getBoundingClientRect();
+
+  naviLinks.forEach(function(menus) {
+    if(artSecPosition.top <= 362.2578125 && artSecPosition.bottom >= 878.2578125){
+      menus.classList.add('white');
+    }else{
+      menus.classList.remove('white');
+    }
+  });
 
   mainTextArray.forEach(function(activate){
     if(artSecPosition.top <= 362.2578125 && artSecPosition.bottom >= 878.2578125) {
       artSection.classList.add('on-screen');
+      mainNavigation.classList.add('bg-black');
       activate.classList.add('change');
-
+      logoLink.classList.add('white');
+      joinButton.classList.add('invert');
+      shopButton.classList.add('invert');
     }else{
       artSection.classList.remove('on-screen');
-      activate.classList.remove('change')
+      mainNavigation.classList.remove('bg-black');
+      activate.classList.remove('change');
+      logoLink.classList.remove('white');
+      joinButton.classList.remove('invert');
+      shopButton.classList.remove('invert');
     }
   })
 });
+
 
 
 

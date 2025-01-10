@@ -28,6 +28,29 @@ section.hamburger-menu span.change{
   background-color: white;
 }
 
+nav.bg-black{
+  background-color: black;
+}
+
+a.logo.white{
+  color: white;
+}
+
+a.links.white{
+  color: white;
+}
+
+button.join-btn.invert{
+  border: white 1.5px solid;
+  color: white;
+}
+
+button.shop-btn.invert{
+  border: white 1.5px solid;
+  background-color: white;
+  color: black;
+}
+
 /* 
   Clicking on hamburger menu transoforms into
   an X to guide users an exit to the full screen
